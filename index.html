@@ -5,36 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Final Project</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
 
   <!-- Background Gradient and Blur -->
   <img class="image-gradient" src="images/gradient.png" alt="gradient">
+  <img class="pluto-key" src="images/Pluto Key.png" alt="Pluto Key">
   <div class="layer-blur"></div>
 
   <!-- Header -->
   <header>
-    <div class="logo">HackYukki</div>
-
-    <nav class="nav-links" id="nav-links">
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Projects</a>
-      <a href="#">Contact</a>
-    </nav>
-
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+  <div class="content">
+    <div class="logo-box"
+         data-aos="fade-zoom-in"
+         data-aos-easing="ease-in-back"
+         data-aos-delay="300"
+         data-aos-offset="0"
+         data-aos-duration="1500">
+      <div class="logo">HackYukki</div>
     </div>
-  </header>
+  </div>
+
+  <nav class="nav-links" id="nav-links">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Projects</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>
 
   <!-- Main Content -->
   <main class="container">
     <div class="content">
       <h1>HackYukki</h1>
-      <p class="description">Welcom to my Work.</p>
+      <p class="description">Welcome to my Work.</p>
       <div class="buttons">
         <a href="#" class="btn-get-started">Get Started</a>
         <a href="#" class="btn-signing-main">Sign In</a>
@@ -48,13 +59,9 @@
   </main>
 
   <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
-        
-    </main>
-    </div>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>   
