@@ -324,7 +324,7 @@ main{
     height: 100%;
     object-fit: cover; /* fill screen without stretching */
     opacity: 0.5;
-    z-index: 0;        /* behind header/content, above body bg */
+    z-index: 0;       
 }
 .layer-blur {
     position: fixed;
@@ -479,13 +479,186 @@ nav.nav-links a:hover {
     }
 
     nav.nav-links.active {
-        max-height: 400px; /* animate dropdown vertically on mobile */
+        max-height: 400px; 
     }
 
     nav.nav-links a {
         width: 80%;
         text-align: center;
     }
+}.pluto-key {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 40%;      /* SHRINKS WITH SCREEN */
+    max-width: 400px; /* NEVER GET BIGGER THAN THIS */
+
+    height: auto;
+    object-fit: contain;
+    z-index: -1;
 }
+.pluto-key {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 40%;       /* you can adjust */
+    height: auto;
+    object-fit: contain;
+
+    z-index: 9999;    /* 🔥 brings it to the FRONT */
+    pointer-events: none; /* optional but useful */
+}
+.image-gradient {
+    z-index: -2;
+}
+
+.layer-blur {
+    z-index: -1;
+}/* --- KEYHOLE SPLASH IMAGE (Pluto Key) --- */
+.pluto-key {
+    position: absolute;
+    top: 300px;         /* adjust vertical position to match your circled area */
+    left: 600px;        /* adjust horizontal position to match your circled area */
+
+    width: 80px;        /* smaller size */
+    height: auto;
+
+    /* Remove glow */
+    filter: none;
+
+    animation: none;    /* disables any pulsing animation */
+
+    z-index: 5;         /* in front of background but behind text/buttons */
+    pointer-events: none;
+}/* Target the Pluto Key image */
+.Pluto\ Key {
+    width: 150px; /* adjust size as needed */
+    height: auto; /* maintain aspect ratio */
+    position: absolute; /* lets you move it freely */
+    top: 300px; /* adjust vertical position */
+    left: 600px; /* adjust horizontal position */
+    z-index: 2; /* make sure it’s above the gradient */
+}/* Make Pluto Key responsive */
+.pluto-key {
+    width: 10%;          /* scales with screen width */
+    max-width: 150px;    /* never exceeds 150px */
+    height: auto;        /* maintain aspect ratio */
+    position: absolute;  /* position freely */
+    top: 200px;           /* adjust vertical position */
+    left: 600px;          /* adjust horizontal position */
+    z-index: 2;          /* above background layers */
+}
+
+/* Optional: adjust position on smaller screens */
+@media (max-width: 768px) {
+    .pluto-key {
+        width: 15%;      /* slightly bigger relative size on small screens */
+        top: 30px;
+        left: 20px;
+    }
+}.header-container {
+    max-width: 1200px;       /* container width */
+    margin: 0 auto;           /* center horizontally */
+    padding: 20px;            /* spacing inside container */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* spread logo and nav */
+}/* Container like your tag-box */
+.logo-box {
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1); /* semi-transparent */
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(128, 0, 255, 0.7); /* purple glow */
+    display: inline-block;
+}
+
+.logo {
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+}/* Container like your tag-box */
+.logo-box {
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1); /* semi-transparent */
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(128, 0, 255, 0.7); /* purple glow */
+    display: inline-block;
+}
+
+.logo {
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+}
+.logo-box {
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.2); /* optional semi-transparent bg */
+    box-shadow: 0 0 10px #8a2be2, 0 0 20px #8a2be2, 0 0 30px #8a2be2, 0 0 40px #8a2be2;
+    animation: glow 1.5s infinite alternate; /* continuous glow */
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px #8a2be2, 0 0 10px #8a2be2, 0 0 15px #8a2be2, 0 0 20px #8a2be2;
+    }
+    100% {
+        box-shadow: 0 0 15px #8a2be2, 0 0 25px #8a2be2, 0 0 35px #8a2be2, 0 0 45px #8a2be2;
+    }
+}
+
+.logo {
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+}.about-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;           /* space between image and text */
+  max-width: 1000px;   /* optional: limits container width */
+  margin: 0 auto;      /* center container */
+  padding: 20px;
+  flex-wrap: wrap;     /* wraps on small screens */
+}
+
+.about-image {
+  width: 200px;        /* smaller image */
+  height: auto;        /* maintain aspect ratio */
+  border-radius: 10px; /* optional rounded corners */
+  box-shadow: 0 0 15px rgba(128, 0, 255, 0.5); /* optional glow */
+}
+
+.about-text {
+  flex: 1;             /* text takes remaining space */
+  min-width: 200px;    /* ensures text doesn't get too small */
+}
+
+.about-paragraph {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #fff;         /* adjust as needed */
+}
+@media (max-width: 600px) {
+  .about-container {
+    flex-direction: column; /* stack vertically on small screens */
+    align-items: flex-start;
+  }
+
+  .about-image {
+    width: 100%;           /* full width image */
+    max-width: 300px;      /* limit max size */
+    margin-bottom: 15px;   /* space below image */
+  }
+}
+
+
+
+
+
+
+
 
 
