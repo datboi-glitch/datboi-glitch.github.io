@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Final Project</title>
+  <title>HackYukki - 3D Artist & Designer</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
@@ -11,57 +11,176 @@
 
   <!-- Background Gradient and Blur -->
   <img class="image-gradient" src="images/gradient.png" alt="gradient">
-  <img class="pluto-key" src="images/Pluto Key.png" alt="Pluto Key">
+  <img src="images/plutokeytransparent.png" alt="Pluto Key" class="pluto-key">
   <div class="layer-blur"></div>
 
   <!-- Header -->
   <header>
-  <div class="content">
-    <div class="logo-box"
-         data-aos="fade-zoom-in"
-         data-aos-easing="ease-in-back"
-         data-aos-delay="300"
-         data-aos-offset="0"
-         data-aos-duration="1500">
-      <div class="logo">HackYukki</div>
-    </div>
-  </div>
-
-  <nav class="nav-links" id="nav-links">
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Projects</a>
-    <a href="#">Contact</a>
-  </nav>
-
-  <div class="hamburger" id="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</header>
-
-  <!-- Main Content -->
-  <main class="container">
     <div class="content">
-      <h1>HackYukki</h1>
-      <p class="description">Welcome to my Work.</p>
-      <div class="buttons">
-        <a href="#" class="btn-get-started">Get Started</a>
-        <a href="#" class="btn-signing-main">Sign In</a>
+      <div class="logo-box"
+           data-aos="fade-zoom-in"
+           data-aos-easing="ease-in-back"
+           data-aos-delay="300"
+           data-aos-offset="0"
+           data-aos-duration="1500">
+        <div class="logo">HackYukki</div>
       </div>
     </div>
 
-    <!-- 3D placeholder -->
-    <div class="robot-3d">
-      <!-- Embed your Spline 3D scene here -->
-    </div>
-  </main>
+    <nav class="nav-links" id="nav-links">
+      <a href="#">Home</a>
+      <a href="#bio">Bio</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#interests">Interests</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-  <script src="script.js"></script>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content" data-aos="fade-up">
+      <h1>HackYukki</h1>
+      <h3>3D Artist & Designer</h3>
+      <p>Transforming ideas into stunning visuals and immersive animations.</p>
+      <div class="buttons">
+        <a href="#bio" class="btn-primary">Get Started</a>
+        <a href="#projects" class="btn-secondary">Portfolio</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bio Section -->
+  <section class="about-section" id="bio">
+    <div class="about-container">
+      <div class="about-text" data-aos="fade-right">
+        <h2>About Me</h2>
+        <p>
+          I’m HackYukki, a 3D artist passionate about crafting visually captivating experiences.
+          I specialize in modeling, animation, and rendering using Blender, Maya, and Cinema 4D.
+        </p>
+        <ul>
+          <li>Blender, Maya, Cinema 4D</li>
+          <li>3D Modeling & Sculpting</li>
+          <li>Animation & Visual Effects</li>
+          <li>AR / Interactive Experiences</li>
+        </ul>
+      </div>
+      <div class="about-image" data-aos="fade-left">
+        <img src="images/yukki.png" alt="HackYukki 3D Art">
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills-section">
+    <h2 data-aos="fade-up">My Skills</h2>
+    <div class="skills-grid">
+      <!-- Blender logo clickable, scrolls to Blender art -->
+      <div class="skill" data-aos="zoom-in">
+        <a href="#blenderworks">
+          <img src="images/BlenderLogo.png" alt="Blender">
+          <p>Blender</p>
+        </a>
+      </div>
+      <div class="skill" data-aos="zoom-in" data-aos-delay="100">
+        <img src="images/Mayalogotransparent.png" alt="Maya">
+        <p>Maya</p>
+      </div>
+      <div class="skill" data-aos="zoom-in" data-aos-delay="200">
+        <img src="images/Sleek4D.png" alt="Cinema 4D">
+        <p>Cinema 4D</p>
+      </div>
+      <div class="skill" data-aos="zoom-in" data-aos-delay="300">
+        <img src="images/SourceFilmakerLogo.png" alt="SourceFilmmaker">
+        <p>SourceFilmmaker</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section">
+    <h2 data-aos="fade-up">Portfolio</h2>
+    <div class="projects-grid">
+      <div class="project-card" data-aos="flip-left">
+        <img src="images/project1.png" alt="Project 1">
+        <h3>Motion Graphics</h3>
+      </div>
+
+      <div class="project-card" data-aos="flip-left" data-aos-delay="100">
+        <video src="videos/TetoTeto2.mp4" controls muted loop playsinline></video>
+        <h3>Animated Short</h3>
+      </div>
+
+      <div class="project-card" data-aos="flip-left" data-aos-delay="200">
+        <video src="videos/2024HackYukki.mp4" controls muted loop playsinline></video>
+        <h3>Visual Effects Project</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interests Section -->
+  <section id="interests" class="interests-section">
+    <h2 data-aos="fade-up">Beyond 3D</h2>
+    <p data-aos="fade-up" data-aos-delay="100">
+      I enjoy coding interactive web experiences, exploring new animation techniques, 
+      and experimenting with augmented reality.
+    </p>
+  </section>
+
+  <!-- Video Intro -->
+  <div class="video-intro">
+    <video src="videos/HackYukki2026.mp4" autoplay muted playsinline></video>
+  </div>
+
+  <!-- 3D Showcase Section -->
+  <section class="showcase-3d">
+    <h2 data-aos="fade-up">Explore in 3D</h2>
+    <div class="robot-3d" data-aos="zoom-in">
+      <!-- Embed your Spline/Three.js 3D model here -->
+    </div>
+  </section>
+
+  <!-- Blender Works Section -->
+  <section id="blenderworks" class="blender-section">
+    <h2 data-aos="fade-up">Blender Works</h2>
+    <div class="blender-grid">
+      <div class="blender-card" data-aos="zoom-in">
+        <img src="images/blenderwork1.png" alt="Blender Render 1">
+        <p>Render 1</p>
+      </div>
+      <div class="blender-card" data-aos="zoom-in" data-aos-delay="150">
+        <img src="images/blenderwork2.png" alt="Blender Render 2">
+        <p>Render 2</p>
+      </div>
+      <div class="blender-card" data-aos="zoom-in" data-aos-delay="300">
+        <img src="images/blenderwork3.png" alt="Blender Render 3">
+        <p>Render 3</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image Lightbox -->
+  <div id="imgLightbox" class="img-lightbox">
+    <span class="close-lightbox">&times;</span>
+    <img class="lightbox-img" id="lightboxImg">
+  </div>
+
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-    AOS.init();
+    AOS.init({ duration: 1000, once: true });
   </script>
+  <script src="script.js"></script>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 HackYukki. All rights reserved.</p>
+  </footer>
 </body>
 </html>
