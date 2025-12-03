@@ -9,6 +9,13 @@
 </head>
 <body>
 
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loadingScreen">
+    <img src="images/plutokeytransparent.png" alt="Pluto Key" class="pluto-key">
+    <div class="logo">HackYukki</div>
+    <div class="loading-spinner"></div>
+  </div>
+
   <!-- Background Gradient and Blur -->
   <img class="image-gradient" src="images/gradient.png" alt="gradient">
   <img src="images/plutokeytransparent.png" alt="Pluto Key" class="pluto-key">
@@ -82,7 +89,6 @@
   <section id="skills" class="skills-section">
     <h2 data-aos="fade-up">My Skills</h2>
     <div class="skills-grid">
-      <!-- Blender logo clickable, scrolls to Blender art -->
       <div class="skill" data-aos="zoom-in">
         <a href="#blenderworks">
           <img src="images/BlenderLogo.png" alt="Blender">
@@ -134,14 +140,9 @@
     </p>
   </section>
 
-  <!-- Video Intro -->
-  <div class="video-intro">
-    <video src="videos/HackYukki2026.mp4" autoplay muted playsinline></video>
-  </div>
-
   <!-- 3D Showcase Section -->
   <section class="showcase-3d">
-    <h2 data-aos="fade-up">Explore in 3D</h2>
+    <h2 data-aos="fade-up"></h2>
     <div class="robot-3d" data-aos="zoom-in">
       <!-- Embed your Spline/Three.js 3D model here -->
     </div>
@@ -165,6 +166,53 @@
       </div>
     </div>
   </section>
+
+  <!-- ⭐ SFM Artwork Section -->
+<section id="sfmworks" class="sfm-section">
+  <h2 data-aos="fade-up">SFM Artwork</h2>
+
+  <div class="sfm-grid">
+    <div class="sfm-card" data-aos="zoom-in">
+      <img src="images/sfm1.png" alt="SFM Artwork 1">
+    </div>
+    <div class="sfm-card" data-aos="zoom-in" data-aos-delay="100">
+      <img src="images/sfm2.png" alt="SFM Artwork 2">
+    </div>
+    <div class="sfm-card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="images/sfm3.png" alt="SFM Artwork 3">
+    </div>
+  </div>
+</section>
+<!-- Motion Graphics Section -->
+<section id="motiongraphics" class="motion-section">
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline class="motion-bg-video">
+    <source src="videos/HackYukki2026.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <!-- Content on top of video -->
+  <div class="motion-content" data-aos="fade-up">
+    <h2>Motion Graphics</h2>
+    <div class="motion-grid">
+      <div class="motion-card" data-aos="zoom-in">
+        <video src="videos/motion1.mp4" controls muted loop playsinline></video>
+        <p>Motion 1</p>
+      </div>
+      <div class="motion-card" data-aos="zoom-in" data-aos-delay="150">
+        <video src="videos/motion2.mp4" controls muted loop playsinline></video>
+        <p>Motion 2</p>
+      </div>
+      <div class="motion-card" data-aos="zoom-in" data-aos-delay="300">
+        <video src="videos/motion3.mp4" controls muted loop playsinline></video>
+        <p>Motion 3</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </div>
+</section>
 
   <!-- Image Lightbox -->
   <div id="imgLightbox" class="img-lightbox">
