@@ -15,33 +15,46 @@ document.querySelectorAll('.nav-links a').forEach(link => {
   });
 });
 
-
+/* ---------------------------
+   LIGHTBOX (Blender Section Only)
+--------------------------- */
 const lightbox = document.getElementById("imgLightbox");
 const lightboxImg = document.getElementById("lightboxImg");
 const closeBtn = document.querySelector(".close-lightbox");
 
-// Click image → open lightbox
+// Only select images inside the Blender section
 document.querySelectorAll(".blender-card img").forEach(image => {
+  image.style.cursor = "pointer"; // indicate clickability
   image.addEventListener("click", () => {
     lightbox.style.display = "flex";
-    lightboxImg.src = image.src;
-    lightbox.classList.add("show"); // add pop-out animation
+    lightboxImg.src = image.src; // show the original Blender image
+    setTimeout(() => {
+      lightbox.classList.add("show"); // fade-in animation
+    }, 10);
   });
 });
 
-// Close (X)
+// Close lightbox via X button
 closeBtn.addEventListener("click", () => {
-  lightbox.style.display = "none";
   lightbox.classList.remove("show");
+  setTimeout(() => {
+    lightbox.style.display = "none";
+  }, 300); // match CSS transition duration
 });
 
-// Click outside image → close
+// Close lightbox by clicking outside the image
 lightbox.addEventListener("click", (e) => {
   if (e.target === lightbox) {
-    lightbox.style.display = "none";
     lightbox.classList.remove("show");
+    setTimeout(() => {
+      lightbox.style.display = "none";
+    }, 300);
   }
-});// Smooth scroll for Blender skill link
+});
+
+/* ---------------------------
+   SMOOTH SCROLL
+--------------------------- */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -55,3 +68,28 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+/* ---------------------------
+   LOADING SCREEN
+--------------------------- */
+window.addEventListener('load', () => {
+  const loader = document.getElementById('loadingScreen');
+  loader.style.transition = 'opacity 2s ease';
+  loader.style.opacity = '0';
+  loader.style.pointerEvents = 'none';
+  setTimeout(() => {
+    loader.style.display = 'none';
+  }, 2000); // match the 2s transition
+});
+// ---------------------------
+// LIGHTBOX FOR SFM
+// ---------------------------
+document.querySelectorAll(".sfm-card img").forEach(image => {
+  image.style.cursor = "pointer"; // show pointer on hover
+  image.addEventListener("click", () => {
+    lightbox.style.display = "flex";
+    lightboxImg.src = image.src;   // show original image
+    setTimeout(() => {
+      lightbox.classList.add("show"); // fade-in animation
+    }, 10);
+  });
+});
