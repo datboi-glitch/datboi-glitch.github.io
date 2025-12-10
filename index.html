@@ -6,6 +6,7 @@
   <title>HackYukki - 3D Artist & Designer</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  
 </head>
 <body>
 
@@ -38,8 +39,8 @@
       <a href="#">Home</a>
       <a href="#bio">Bio</a>
       <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#interests">Interests</a>
+      <a href="#projects">Portfolio</a>
+      <a href="#interests">3D Renders And Motion Graphics</a>
       <a href="#contact">Contact</a>
     </nav>
 
@@ -57,7 +58,7 @@
       <h3>3D Artist & Designer</h3>
       <p>Transforming ideas into stunning visuals and immersive animations.</p>
       <div class="buttons">
-        <a href="#bio" class="btn-primary">Get Started</a>
+        <a href="#bio" class="btn-primary">About Me</a>
         <a href="#projects" class="btn-secondary">Portfolio</a>
       </div>
     </div>
@@ -69,14 +70,9 @@
       <div class="about-text" data-aos="fade-right">
         <h2>About Me</h2>
         <p>
-          I’m HackYukki, a 3D artist passionate about crafting visually captivating experiences.
-          I specialize in modeling, animation, and rendering using Blender, Maya, and Cinema 4D.
+          I’m HackYukki, a 21-year-old 3D artist who specializes in building worlds from pure imagination.
+I focus on crafting bold visuals, expressive characters, and cinematic moments that leave an impact — all brought to life through a refined blend of diverse 3D creation tools and advanced editing software that shape my ideas into polished final art
         </p>
-        <ul>
-          <li>Blender, Maya, Cinema 4D</li>
-          <li>3D Modeling & Sculpting</li>
-          <li>Animation & Visual Effects</li>
-          <li>AR / Interactive Experiences</li>
         </ul>
       </div>
       <div class="about-image" data-aos="fade-left">
@@ -88,6 +84,10 @@
   <!-- Skills Section -->
   <section id="skills" class="skills-section">
     <h2 data-aos="fade-up">My Skills</h2>
+    <p class="skills-desc" data-aos="fade-up" data-aos-delay="100">
+  I bring ideas to life with dynamic 3D modeling, expressive animation, and polished visual design — blending creativity and technical skill to create art that stands out.
+</p>
+
     <div class="skills-grid">
       <div class="skill" data-aos="zoom-in">
         <a href="#blenderworks">
@@ -133,20 +133,13 @@
 
   <!-- Interests Section -->
   <section id="interests" class="interests-section">
-    <h2 data-aos="fade-up">Beyond 3D</h2>
+    <h2 data-aos="fade-up">3D Renders And Motion Graphics</h2>
     <p data-aos="fade-up" data-aos-delay="100">
-      I enjoy coding interactive web experiences, exploring new animation techniques, 
-      and experimenting with augmented reality.
+      Showcased below are a few of my most defining pieces — artworks that represent my growth, creativity, and commitment to 3D design.
     </p>
   </section>
 
-  <!-- 3D Showcase Section -->
-  <section class="showcase-3d">
-    <h2 data-aos="fade-up"></h2>
-    <div class="robot-3d" data-aos="zoom-in">
-      <!-- Embed your Spline/Three.js 3D model here -->
-    </div>
-  </section>
+  
 
   <!-- Blender Works Section -->
   <section id="blenderworks" class="blender-section">
@@ -154,15 +147,15 @@
     <div class="blender-grid">
       <div class="blender-card" data-aos="zoom-in">
         <img src="images/blenderwork1.png" alt="Blender Render 1">
-        <p>Render 1</p>
+        <p>P.L.U.T.O</p>
       </div>
       <div class="blender-card" data-aos="zoom-in" data-aos-delay="150">
         <img src="images/blenderwork2.png" alt="Blender Render 2">
-        <p>Render 2</p>
+        <p>Shadow The Hedgehog</p>
       </div>
       <div class="blender-card" data-aos="zoom-in" data-aos-delay="300">
         <img src="images/blenderwork3.png" alt="Blender Render 3">
-        <p>Render 3</p>
+        <p>Yukki The Valerian</p>
       </div>
     </div>
   </section>
@@ -197,22 +190,49 @@
     <div class="motion-grid">
       <div class="motion-card" data-aos="zoom-in">
         <video src="videos/motion1.mp4" controls muted loop playsinline></video>
-        <p>Motion 1</p>
+        <p>Adidas</p>
       </div>
       <div class="motion-card" data-aos="zoom-in" data-aos-delay="150">
         <video src="videos/motion2.mp4" controls muted loop playsinline></video>
-        <p>Motion 2</p>
+        <p>Nike</p>
       </div>
       <div class="motion-card" data-aos="zoom-in" data-aos-delay="300">
         <video src="videos/motion3.mp4" controls muted loop playsinline></video>
-        <p>Motion 3</p>
+        <p>RGB Logo Animation</p>
       </div>
     </div>
   </div>
 </section>
+<!-- Contact Toggle Button -->
+<div class="contact-toggle" onclick="toggleContact(event)">
+  Contact
+</div>
 
+<!-- Slide-Out Contact Sidebar -->
+<div id="contactSidebar" class="contact-sidebar">
+  <h2>Contact Me</h2>
+  
+  <div class="contact-links">
+    <a href="https://www.youtube.com/@hackyukki8135" target="_blank" class="contact-link">
+      <img src="images/youtube-icon.png" alt="YouTube">
+      YouTube
+    </a>
+
+    <a href="https://www.instagram.com/hackyukki/" target="_blank" class="contact-link">
+      <img src="images/instagram-icon.png" alt="Instagram">
+      Instagram
+    </a>
+
+    <a href="https://web-cdn.bsky.app/profile/hackyukki.bsky.social" target="_blank" class="contact-link">
+      <img src="images/bluesky-icon.png" alt="Bluesky">
+      Bluesky
+    </a>
   </div>
-</section>
+
+  <!-- Optional Close Button inside sidebar -->
+  <button class="close-btn" onclick="toggleContact(event)">Close</button>
+</div>
+
 
   <!-- Image Lightbox -->
   <div id="imgLightbox" class="img-lightbox">
