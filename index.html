@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HackYukki - 3D Artist & Designer</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  
 </head>
 <body>
 
@@ -17,221 +16,146 @@
     <div class="loading-spinner"></div>
   </div>
 
-  <!-- Background Gradient and Blur -->
-  <img class="image-gradient" src="images/gradient.png" alt="gradient">
-  <img src="images/plutokeytransparent.png" alt="Pluto Key" class="pluto-key">
-  <div class="layer-blur"></div>
-
   <!-- Header -->
   <header>
-    <div class="content">
-      <div class="logo-box"
-           data-aos="fade-zoom-in"
-           data-aos-easing="ease-in-back"
-           data-aos-delay="300"
-           data-aos-offset="0"
-           data-aos-duration="1500">
-        <div class="logo"></div>
+    <div class="header-container">
+      <div class="logo"></div>
+      <nav class="nav-links" id="nav-links">
+        <a href="#">Home</a>
+        <a href="#bio">Bio</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Animations</a>
+        <a href="#interests">3D Renders</a>
+        </nav>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-    </div>
-
-    <nav class="nav-links" id="nav-links">
-      <a href="#">Home</a>
-      <a href="#bio">Bio</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Portfolio</a>
-      <a href="#interests">3D Renders And Motion Graphics</a>
-      </nav>
-
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <div class="hero-content" data-aos="fade-up">
-      <h1>HackYukki</h1>
-      <h3>3D Artist & Designer</h3>
-      <p>Transforming ideas into stunning visuals and immersive animations.</p>
-      <div class="buttons">
-        <a href="#bio" class="btn-primary">About Me</a>
-        <a href="#projects" class="btn-secondary">Portfolio</a>
+  <main class="container">
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-content" data-aos="fade-up">
+        <h1>HackYukki</h1>
+        <h3>3D Artist & Designer</h3>
+        <p>Transforming ideas into stunning visuals and immersive animations.</p>
+        <div class="buttons">
+          <a href="#bio" class="btn-primary">About Me</a>
+          
       </div>
+      <img src="images/plutokeytransparent.png" alt="Pluto Key" class="pluto-key" />
+    </section>
+
+    <!-- Bio Section -->
+    <section id="bio" class="about-section">
+      <div class="about-container">
+        <div class="about-text" data-aos="fade-right">
+          <h2>About Me</h2>
+          <p>
+            I’m HackYukki, a 21-year-old 3D artist who specializes in building worlds from pure imagination.
+            I focus on crafting bold visuals, expressive characters, and cinematic moments that leave an impact —
+            all brought to life through a refined blend of diverse 3D creation tools and advanced editing software.
+          </p>
+        </div>
+        <div class="about-image" data-aos="fade-left">
+          <img src="images/Yukki.png" alt="HackYukki 3D Art">
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+      <h2 data-aos="fade-up">My Skills</h2>
+      <p class="skills-desc" data-aos="fade-up" data-aos-delay="100">
+        I bring ideas to life with dynamic 3D modeling, expressive animation, and polished visual design — blending creativity and technical skill to create art that stands out.
+      </p>
+      <div class="skills-grid">
+        <div class="skill" data-aos="zoom-in"><img src="images/BlenderLogo.png" alt="Blender"><p>Blender</p></div>
+        <div class="skill" data-aos="zoom-in" data-aos-delay="100"><img src="images/Mayalogotransparent.png" alt="Maya"><p>Maya</p></div>
+        <div class="skill" data-aos="zoom-in" data-aos-delay="200"><img src="images/Sleek4D.png" alt="Cinema 4D"><p>Cinema 4D</p></div>
+        <div class="skill" data-aos="zoom-in" data-aos-delay="300"><img src="images/SourceFilmakerLogo.png" alt="SourceFilmmaker"><p>SourceFilmmaker</p></div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+      <h2 data-aos="fade-up">Animations</h2>
+      <div class="projects-grid">
+        <div class="project-card" data-aos="flip-left">
+          <video src="videos/yukki-animation.mp4" controls muted loop playsinline></video>
+          <h3>Heat Vision</h3>
+        </div>
+        <div class="project-card" data-aos="flip-left" data-aos-delay="100">
+          <video src="videos/TetoTeto2.mp4" controls muted loop playsinline></video>
+          <h3>Teto's Around The World</h3>
+        </div>
+        <div class="project-card" data-aos="flip-left" data-aos-delay="200">
+          <video src="videos/2024HackYukki.mp4" controls muted loop playsinline></video>
+          <h3>Visual Effects Project</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interests Section -->
+    <section id="interests" class="interests-section">
+      <h2 data-aos="fade-up">3D Renders & Motion Graphics</h2>
+      <p data-aos="fade-up" data-aos-delay="100">
+        Showcased below are a few of my defining pieces — artworks that represent my growth, creativity, and commitment to 3D design.
+      </p>
+    </section>
+
+    <!-- Blender Works -->
+    <section id="blenderworks" class="blender-section">
+      <h2 data-aos="fade-up">Blender Works</h2>
+      <div class="blender-grid">
+        <div class="blender-card" data-aos="zoom-in"><img src="images/blenderwork1.png" alt="Blender Render 1"><p>P.L.U.T.O</p></div>
+        <div class="blender-card" data-aos="zoom-in" data-aos-delay="150"><img src="images/blenderwork2.png" alt="Blender Render 2"><p>Shadow The Hedgehog</p></div>
+        <div class="blender-card" data-aos="zoom-in" data-aos-delay="300"><img src="images/blenderwork3.png" alt="Blender Render 3"><p>Yukki The Valerian</p></div>
+      </div>
+    </section>
+
+    <!-- SFM Artwork -->
+    <section id="sfmworks" class="sfm-section">
+      <h2 data-aos="fade-up">SFM Artwork</h2>
+      <div class="sfm-grid">
+        <div class="sfm-card" data-aos="zoom-in"><img src="images/sfm1.png" alt="SFM Artwork 1"></div>
+        <div class="sfm-card" data-aos="zoom-in" data-aos-delay="100"><img src="images/sfm2.png" alt="SFM Artwork 2"></div>
+        <div class="sfm-card" data-aos="zoom-in" data-aos-delay="200"><img src="images/sfm3.png" alt="SFM Artwork 3"></div>
+      </div>
+    </section>
+
+    <!-- Motion Graphics -->
+    <section id="motiongraphics" class="motion-section">
+      <video autoplay muted loop playsinline class="motion-bg-video">
+        <source src="videos/HackYukki2026.mp4" type="video/mp4">
+      </video>
+      <div class="motion-content" data-aos="fade-up">
+        <h2>Motion Graphics</h2>
+        <div class="motion-grid">
+          <div class="motion-card" data-aos="zoom-in"><video src="videos/motion1.mp4" controls muted loop playsinline></video><p>Adidas</p></div>
+          <div class="motion-card" data-aos="zoom-in" data-aos-delay="150"><video src="videos/motion2.mp4" controls muted loop playsinline></video><p>Nike</p></div>
+          <div class="motion-card" data-aos="zoom-in" data-aos-delay="300"><video src="videos/motion3.mp4" controls muted loop playsinline></video><p>RGB Logo Animation</p></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Contact Sidebar -->
+  <div class="contact-toggle" onclick="toggleContact(event)">Contact</div>
+  <div id="contactSidebar" class="contact-sidebar">
+    <h2>Contact Me</h2>
+    <div class="contact-links">
+      <a href="https://www.youtube.com/@hackyukki8135" target="_blank"><img src="images/YouTube.png" alt="YouTube"> YouTube</a>
+      <a href="https://www.instagram.com/hackyukki/" target="_blank"><img src="images/instagram.jpg" alt="Instagram"> Instagram</a>
+      <a href="https://web-cdn.bsky.app/profile/hackyukki.bsky.social" target="_blank"><img src="images/Bluesky.png" alt="Bluesky"> Bluesky</a>
     </div>
-  </section>
-
-  <!-- Bio Section -->
-  <section class="about-section" id="bio">
-    <div class="about-container">
-      <div class="about-text" data-aos="fade-right">
-        <h2>About Me</h2>
-        <p>
-          I’m HackYukki, a 21-year-old 3D artist who specializes in building worlds from pure imagination.
-I focus on crafting bold visuals, expressive characters, and cinematic moments that leave an impact — all brought to life through a refined blend of diverse 3D creation tools and advanced editing software that shape my ideas into polished final art
-        </p>
-        </ul>
-      </div>
-      <div class="about-image" data-aos="fade-left">
-        <img src="images/Yukki.png" alt="HackYukki 3D Art">
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="skills-section">
-    <h2 data-aos="fade-up">My Skills</h2>
-    <p class="skills-desc" data-aos="fade-up" data-aos-delay="100">
-  I bring ideas to life with dynamic 3D modeling, expressive animation, and polished visual design — blending creativity and technical skill to create art that stands out.
-</p>
-
-    <div class="skills-grid">
-      <div class="skill" data-aos="zoom-in">
-        <a href="#blenderworks">
-          <img src="images/BlenderLogo.png" alt="Blender">
-          <p>Blender</p>
-        </a>
-      </div>
-      <div class="skill" data-aos="zoom-in" data-aos-delay="100">
-        <img src="images/Mayalogotransparent.png" alt="Maya">
-        <p>Maya</p>
-      </div>
-      <div class="skill" data-aos="zoom-in" data-aos-delay="200">
-        <img src="images/Sleek4D.png" alt="Cinema 4D">
-        <p>Cinema 4D</p>
-      </div>
-      <div class="skill" data-aos="zoom-in" data-aos-delay="300">
-        <img src="images/SourceFilmakerLogo.png" alt="SourceFilmmaker">
-        <p>SourceFilmmaker</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="projects-section">
-    <h2 data-aos="fade-up">Portfolio</h2>
-    <div class="projects-grid">
-      <div class="project-card" data-aos="flip-left">
-        <img src="images/project1.png" alt="Project 1">
-        <h3>Motion Graphics</h3>
-      </div>
-
-      <div class="project-card" data-aos="flip-left" data-aos-delay="100">
-        <video src="videos/TetoTeto2.mp4" controls muted loop playsinline></video>
-        <h3>Animated Short</h3>
-      </div>
-
-      <div class="project-card" data-aos="flip-left" data-aos-delay="200">
-        <video src="videos/2024HackYukki.mp4" controls muted loop playsinline></video>
-        <h3>Visual Effects Project</h3>
-      </div>
-    </div>
-  </section>
-
-  <!-- Interests Section -->
-  <section id="interests" class="interests-section">
-    <h2 data-aos="fade-up">3D Renders And Motion Graphics</h2>
-    <p data-aos="fade-up" data-aos-delay="100">
-      Showcased below are a few of my most defining pieces — artworks that represent my growth, creativity, and commitment to 3D design.
-    </p>
-  </section>
-
-  
-
-  <!-- Blender Works Section -->
-  <section id="blenderworks" class="blender-section">
-    <h2 data-aos="fade-up">Blender Works</h2>
-    <div class="blender-grid">
-      <div class="blender-card" data-aos="zoom-in">
-        <img src="images/blenderwork1.png" alt="Blender Render 1">
-        <p>P.L.U.T.O</p>
-      </div>
-      <div class="blender-card" data-aos="zoom-in" data-aos-delay="150">
-        <img src="images/blenderwork2.png" alt="Blender Render 2">
-        <p>Shadow The Hedgehog</p>
-      </div>
-      <div class="blender-card" data-aos="zoom-in" data-aos-delay="300">
-        <img src="images/blenderwork3.png" alt="Blender Render 3">
-        <p>Yukki The Valerian</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ⭐ SFM Artwork Section -->
-<section id="sfmworks" class="sfm-section">
-  <h2 data-aos="fade-up">SFM Artwork</h2>
-
-  <div class="sfm-grid">
-    <div class="sfm-card" data-aos="zoom-in">
-      <img src="images/sfm1.png" alt="SFM Artwork 1">
-    </div>
-    <div class="sfm-card" data-aos="zoom-in" data-aos-delay="100">
-      <img src="images/sfm2.png" alt="SFM Artwork 2">
-    </div>
-    <div class="sfm-card" data-aos="zoom-in" data-aos-delay="200">
-      <img src="images/sfm3.png" alt="SFM Artwork 3">
-    </div>
+    <button class="close-btn" onclick="toggleContact(event)">Close</button>
   </div>
-</section>
-<!-- Motion Graphics Section -->
-<section id="motiongraphics" class="motion-section">
-  <!-- Background Video -->
-  <video autoplay muted loop playsinline class="motion-bg-video">
-    <source src="videos/HackYukki2026.mp4" type="video/mp4">
-
-  </video>
-
-  <!-- Content on top of video -->
-  <div class="motion-content" data-aos="fade-up">
-    <h2>Motion Graphics</h2>
-    <div class="motion-grid">
-      <div class="motion-card" data-aos="zoom-in">
-        <video src="videos/motion1.mp4" controls muted loop playsinline></video>
-        <p>Adidas</p>
-      </div>
-      <div class="motion-card" data-aos="zoom-in" data-aos-delay="150">
-        <video src="videos/motion2.mp4" controls muted loop playsinline></video>
-        <p>Nike</p>
-      </div>
-      <div class="motion-card" data-aos="zoom-in" data-aos-delay="300">
-        <video src="videos/motion3.mp4" controls muted loop playsinline></video>
-        <p>RGB Logo Animation</p>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Contact Toggle Button -->
-<div class="contact-toggle" onclick="toggleContact(event)">
-  Contact
-</div>
-
-<!-- Slide-Out Contact Sidebar -->
-<div id="contactSidebar" class="contact-sidebar">
-  <h2>Contact Me</h2>
-  
-  <div class="contact-links">
-    <a href="https://www.youtube.com/@hackyukki8135" target="_blank" class="contact-link">
-      <img src="images/youtube-icon.png" alt="YouTube">
-      YouTube
-    </a>
-
-    <a href="https://www.instagram.com/hackyukki/" target="_blank" class="contact-link">
-      <img src="images/instagram-icon.png" alt="Instagram">
-      Instagram
-    </a>
-
-    <a href="https://web-cdn.bsky.app/profile/hackyukki.bsky.social" target="_blank" class="contact-link">
-      <img src="images/bluesky-icon.png" alt="Bluesky">
-      Bluesky
-    </a>
-  </div>
-
-  <!-- Optional Close Button inside sidebar -->
-  <button class="close-btn" onclick="toggleContact(event)">Close</button>
-</div>
-
 
   <!-- Image Lightbox -->
   <div id="imgLightbox" class="img-lightbox">
@@ -239,15 +163,19 @@ I focus on crafting bold visuals, expressive characters, and cinematic moments t
     <img class="lightbox-img" id="lightboxImg">
   </div>
 
+  <footer class="footer">
+    <p>© 2025 HackYukki. All rights reserved.</p>
+    <div class="contact-links">
+      <a href="https://www.youtube.com/@hackyukki8135" target="_blank"><img src="images/YouTube.png" alt="YouTube"> YouTube</a>
+      <a href="https://www.instagram.com/hackyukki/" target="_blank"><img src="images/instagram.jpg" alt="Instagram"> Instagram</a>
+      <a href="https://web-cdn.bsky.app/profile/hackyukki.bsky.social" target="_blank"><img src="images/Bluesky.png" alt="Bluesky"> Bluesky</a>
+    </div>
+  </footer>
+
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 1000, once: true });
   </script>
   <script src="script.js"></script>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <p>© 2025 HackYukki. All rights reserved.</p>
-  </footer>
 </body>
 </html>
