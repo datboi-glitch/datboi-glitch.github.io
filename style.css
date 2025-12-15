@@ -402,6 +402,7 @@ footer {
         top: -25%;
     }
 }/* Pluto Key Animation */
+/* Pluto Key Animation */
 .pluto-key {
     position: absolute;
     top: 20%;             /* initial vertical position */
@@ -410,11 +411,24 @@ footer {
     height: auto;
     z-index: 2;
     pointer-events: none; /* allows clicking through */
-
-    /* floating + slow rotation */
-    animation: floatRotate 6s ease-in-out infinite, pulseGlow 3s ease-in-out infinite;
+    animation: floatRotate 6s ease-in-out infinite,
+               pulseGlow 3s ease-in-out infinite;
     transform-origin: center center;
 }
+
+#plutoHero {
+    position: absolute;
+    top: 20%;                /* vertical position */
+    right: 0;               /* anchored to the right */
+    width: 60px;             /* slightly bigger */
+    height: auto;
+    z-index: 2;
+    pointer-events: none;
+    animation: floatRotate 6s ease-in-out infinite,
+               pulseGlow 3s ease-in-out infinite;
+    transform-origin: center center;
+}
+
 
 /* Floating + rotation */
 @keyframes floatRotate {
@@ -916,7 +930,7 @@ footer {
   margin-top: 12px;
   font-size: 1rem;
 }
-
+/* ABOUT ME SECTION UPGRADE */
 /* -------------------------
    ABOUT ME SECTION (DARKER PLUM)
 ------------------------- */
@@ -1066,9 +1080,9 @@ footer {
 }
 
 
-/* Blender Works Section */
+/* Blender Works Section - Darker Plum */
 .blender-section {
-  background: linear-gradient(135deg, #121212, #1b1b1b); /* Very dark gray gradient */
+  background: linear-gradient(135deg, #2a0a2c, #3b0d3f); /* darker plum gradient */
   padding: 120px 20px;
   text-align: center;
   color: #ffffff;
@@ -1079,7 +1093,7 @@ footer {
   font-weight: 800;
   margin-bottom: 40px;
   letter-spacing: 1.5px;
-  text-shadow: 0 0 10px rgba(255,255,255,0.1); /* subtle glow */
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.12); /* slightly subtler glow */
   position: relative;
   display: inline-block;
 }
@@ -1092,9 +1106,33 @@ footer {
   height: 4px;
   margin: 10px auto 0;
   background: linear-gradient(90deg, #00ffff, #ff00ff); /* cyan → magenta neon gradient */
-  box-shadow: 0 0 8px rgba(0,255,255,0.6), 0 0 12px rgba(255,0,255,0.6);
+  box-shadow: 0 0 6px rgba(0,255,255,0.5), 0 0 10px rgba(255,0,255,0.5);
   border-radius: 2px;
-}/* SFM Artwork Section */
+}
+
+/* Blender Cards */
+.blender-card {
+  background: rgba(59, 13, 63, 0.7); /* darker plum with slight transparency */
+  border-radius: 15px;
+  padding: 15px;
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blender-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(59, 13, 63, 0.8), 0 0 20px rgba(255, 0, 255, 0.5);
+}
+
+.blender-card p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  opacity: 0.85;
+  color: #e0d4f0; /* slightly muted light plum text */
+}
+
+
+/* SFM Artwork Section */
 .sfm-section {
   background: linear-gradient(135deg, #1a1a1a, #2a2a2a); /* Dark gray gradient */
   padding: 150px 20px; /* More padding to make it bigger */

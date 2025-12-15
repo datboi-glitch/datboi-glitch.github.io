@@ -63,19 +63,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 /* ---------------------------
-   LOADING SCREEN
---------------------------- */
-window.addEventListener("load", () => {
-  const loader = document.getElementById("loadingScreen");
-  if (loader) {
-    loader.style.transition = "opacity 2s ease";
-    loader.style.opacity = "0";
-    loader.style.pointerEvents = "none";
-    setTimeout(() => (loader.style.display = "none"), 2000);
-  }
-});
-
-/* ---------------------------
    CONTACT SIDEBAR
 --------------------------- */
 function toggleContact(event) {
@@ -108,3 +95,26 @@ if (header) {
     header.classList.toggle("shrink", window.scrollY > 80);
   });
 }
+
+/* ---------------------------
+   LOADING SCREEN & Pluto Key
+--------------------------- */
+window.addEventListener("load", () => {
+  const loader = document.getElementById("loadingScreen");
+  const pluto = document.getElementById("plutoKey");
+
+  // Animate Pluto Key to top-right
+  if (pluto) {
+    pluto.classList.add("pluto-fixed");
+  }
+
+  // Hide loading screen smoothly
+  if (loader) {
+    loader.style.transition = "opacity 1s ease";
+    loader.style.opacity = "0";
+    loader.style.pointerEvents = "none";
+    setTimeout(() => {
+      loader.style.display = "none";
+    }, 1000);
+  }
+});
