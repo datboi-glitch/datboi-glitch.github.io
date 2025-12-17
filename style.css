@@ -406,7 +406,7 @@ footer {
         right: -5%;
         top: -25%;
     }
-}/* Pluto Key Animation */
+}
 /* Pluto Key Animation */
 .pluto-key {
     position: absolute;
@@ -425,7 +425,7 @@ footer {
     position: absolute;
     top: 20%;                /* vertical position */
     right: 0;               /* anchored to the right */
-    width: 60px;             /* slightly bigger */
+    width: 40px;             /* slightly bigger */
     height: auto;
     z-index: 2;
     pointer-events: none;
