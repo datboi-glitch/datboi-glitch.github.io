@@ -50,12 +50,17 @@ header {
 }
 
 .header-container {
-  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem 1.5rem;
+
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 1rem 2rem;
+  justify-content: center;
+
+  position: relative;
 }
+
 
 .nav-links {
   display: flex;
@@ -1514,4 +1519,17 @@ header.shrink .nav-links a {
     width: 35px;
     height: 35px;
   }
+}
+.logo {
+  position: absolute;
+  left: 1.5rem;
+}
+
+.hamburger {
+  position: absolute;
+  right: 1.5rem;
+}
+.nav-links {
+  display: flex;
+  gap: 2rem;
 }

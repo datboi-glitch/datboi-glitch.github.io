@@ -1,7 +1,11 @@
 /* =========================
-   HAMBURGER MENU (MOBILE)
+   DOM READY
 ========================= */
 document.addEventListener("DOMContentLoaded", () => {
+
+  /* =========================
+     HAMBURGER MENU (MOBILE)
+  ========================= */
   const hamburger = document.getElementById("hamburger");
   const navLinks = document.getElementById("nav-links");
 
@@ -10,54 +14,49 @@ document.addEventListener("DOMContentLoaded", () => {
       navLinks.classList.toggle("active");
     });
 
-    // Close menu when clicking a link
     document.querySelectorAll(".nav-links a").forEach(link => {
       link.addEventListener("click", () => {
         navLinks.classList.remove("active");
       });
     });
   }
-});
 
-/* =========================
-   LIGHTBOX (BLENDER + SFM)
-========================= */
-document.addEventListener("DOMContentLoaded", () => {
+  /* =========================
+     LIGHTBOX (BLENDER + SFM)
+  ========================= */
   const lightbox = document.getElementById("imgLightbox");
   const lightboxImg = document.getElementById("lightboxImg");
   const closeBtn = document.querySelector(".close-lightbox");
 
-  if (!lightbox || !lightboxImg || !closeBtn) return;
-
-  document
-    .querySelectorAll(".blender-card img, .sfm-card img")
-    .forEach(image => {
-      image.style.cursor = "pointer";
-      image.addEventListener("click", () => {
-        lightbox.style.display = "flex";
-        lightboxImg.src = image.src;
-        setTimeout(() => lightbox.classList.add("show"), 10);
+  if (lightbox && lightboxImg && closeBtn) {
+    document
+      .querySelectorAll(".blender-card img, .sfm-card img")
+      .forEach(image => {
+        image.style.cursor = "pointer";
+        image.addEventListener("click", () => {
+          lightbox.style.display = "flex";
+          lightboxImg.src = image.src;
+          setTimeout(() => lightbox.classList.add("show"), 10);
+        });
       });
+
+    const closeLightbox = () => {
+      lightbox.classList.remove("show");
+      setTimeout(() => {
+        lightbox.style.display = "none";
+      }, 300);
+    };
+
+    closeBtn.addEventListener("click", closeLightbox);
+
+    lightbox.addEventListener("click", e => {
+      if (e.target === lightbox) closeLightbox();
     });
+  }
 
-  const closeLightbox = () => {
-    lightbox.classList.remove("show");
-    setTimeout(() => {
-      lightbox.style.display = "none";
-    }, 300);
-  };
-
-  closeBtn.addEventListener("click", closeLightbox);
-
-  lightbox.addEventListener("click", e => {
-    if (e.target === lightbox) closeLightbox();
-  });
-});
-
-/* =========================
-   SMOOTH SCROLL
-========================= */
-document.addEventListener("DOMContentLoaded", () => {
+  /* =========================
+     SMOOTH SCROLL
+  ========================= */
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", e => {
       const target = document.querySelector(anchor.getAttribute("href"));
@@ -70,10 +69,20 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  /* =========================
+     CONTACT SIDEBAR
+  ========================= */
+  document.querySelectorAll(".contact-sidebar a").forEach(link => {
+    link.addEventListener("click", e => {
+      e.stopPropagation();
+    });
+  });
+
 });
 
 /* =========================
-   CONTACT SIDEBAR
+   CONTACT SIDEBAR TOGGLE
 ========================= */
 function toggleContact(event) {
   const sidebar = document.getElementById("contactSidebar");
@@ -96,30 +105,16 @@ document.addEventListener("click", e => {
 });
 
 /* =========================
-   HEADER SHRINK ON SCROLL
-========================= */
-document.addEventListener("DOMContentLoaded", () => {
-  const header = document.querySelector("header");
-  if (!header) return;
-
-  window.addEventListener("scroll", () => {
-    header.classList.toggle("shrink", window.scrollY > 80);
-  });
-});
-
-/* =========================
    LOADING SCREEN & PLUTO KEY
 ========================= */
 window.addEventListener("load", () => {
   const loader = document.getElementById("loadingScreen");
   const pluto = document.getElementById("plutoKey");
 
-  // Move Pluto key to header
   if (pluto) {
     pluto.classList.add("pluto-fixed");
   }
 
-  // Fade out loading screen
   if (loader) {
     loader.style.transition = "opacity 1s ease";
     loader.style.opacity = "0";
